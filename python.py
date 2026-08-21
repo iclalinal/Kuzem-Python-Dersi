@@ -1,8 +1,8 @@
-import hesaplamalar as hp
+import hesaplamalar
 
-fiyat = hp.kdv_ekle(100)
-print("Fiyat (KDV dahil):", fiyat)
+fiyat = float(input("Fiyatı girin: "))
+kdv_dahil_fiyat = hesaplamalar.kdv_ekle(fiyat)
+print("Fiyat (KDV dahil):", kdv_dahil_fiyat)
 
-sinav_notu = 75
-durum = hp.gecti_kaldi(sinav_notu)
-print("Öğrenci Durumu:", durum)
+
+print("Not 45:", hesaplamalar.gecti_kaldi(45))
