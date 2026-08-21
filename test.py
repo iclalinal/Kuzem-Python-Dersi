@@ -1,8 +1,7 @@
-import hesaplamalar as hp
+import istatistik as ist
 
-print("KDV Hesaplama ve Geçti/Kaldı Durumu")
-print("1. KDV Hesaplama")
-print("KDV dahil fiyat:", hp.kdv_ekle(25))
+notlar = ist.random_uret(10)
 
-print("\n2. Geçti/Kaldı Durumu")
-print("Not 45:", hp.gecti_kaldi(45))
+min_not, max_not, ort_not = ist.istatistik_hesapla(*notlar)
+print("Notlar:", notlar)
+print(f"Minimum: {min_not}, Maximum: {max_not}, Ortalama: {ort_not}")
