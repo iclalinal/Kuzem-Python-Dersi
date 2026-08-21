@@ -1,6 +1,8 @@
-notlar = [45, 78, 92, 30, 55, 60, 40] 
-gecenler = list(filter(lambda n: n >= 50, notlar))
-ikiKati = list(map(lambda n: n * 2, gecenler))
+import hesaplamalar as hp
 
+fiyat = hp.kdv_ekle(100)
+print("Fiyat (KDV dahil):", fiyat)
 
-print("Geçenlerin notları:", gecenler)
+sinav_notu = 75
+durum = hp.gecti_kaldi(sinav_notu)
+print("Öğrenci Durumu:", durum)
