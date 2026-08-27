@@ -1,17 +1,23 @@
-import kutuphane_islemleri as k_i
-from datetime import datetime
+try: 
+    yas = int(input("Yaşınızı girin: "))
+except ValueError:
+    print("Lütfen geçerli bir sayı girin.")
 
-kutuphane = {}
+ogrenci = {"isim": "Ahmet"}
+try:
+    print(ogrenci["not"])
+except KeyError:
+    print("Öğrencinin not bilgisi yok.")
 
-k_i.kitap_ekle(kutuphane, "Sefiller", "Victor Hugo")
-k_i.kitap_ekle(kutuphane, "Suç ve Ceza", "Fyodor Dostoyevski")
+try:
+    sayi = int(input("Bir sayı girin: "))
+    sonuc = 10 / sayi
+except ValueError:
+    print("Lütfen geçerli bir sayı girin.")
+except ZeroDivisionError:
+    print("Sıfıra bölme hatası! Lütfen sıfırdan farklı bir sayı girin.")
 
-basarili = k_i.odunc_al(kutuphane, "Sefiller")
-if basarili:
-    print(basarili, datetime.now().strftime("%d-%m-%Y"), "Sefiller kitabı ödünç alındı.")
-
-basarisiz = k_i.odunc_al(kutuphane, "Sefiller")
-if basarisiz:
-    print(basarili, datetime.now().strftime("%d-%m-%Y"), "Sefiller kitabı ödünç alındı.")
-else:
-    print("Sefiller kitabı ödünç alınamadı, zaten ödünç verilmiş.")
+try: 
+    sonuc = 10 / 0
+except Exception as e:
+    print("Bir hata oluştu:", e)
