@@ -1,6 +1,11 @@
 try:
-    with open('ana_program.txt', 'r') as dosya:
-        icerik = dosya.read()
+    with open('gunluk.txt', 'r') as dosya:
+        print("Önceki kayitlar:")
+        for satir in dosya:
+            print(satir.strip())
 except FileNotFoundError:
-    with open('ana_program.txt', 'w') as dosya:
-        dosya.write("Bu bir dosya oluşturma testi.\n")
+    print("ilk kaydınız")
+
+yeni_giris = input("Yeni kaydınızı giriniz: ")
+with open('gunluk.txt', 'a') as dosya:
+    dosya.write(yeni_giris + '\n')
