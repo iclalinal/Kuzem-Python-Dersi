@@ -1,20 +1,30 @@
 import csv
 
-kitaplar = [["simyacı","paulo coelho", 1988], ["sineklerin tanrısı", "william golding", 1954], ["1984", "george orwell", 1949]]
+# Öğrenci verilerini içeren liste
+ogrenciler = [["isim","ders","not"],["Ali","Matematik",90],["Ayşe","Fizik",85],["Mehmet","Kimya",78],["Fatma","Biyoloji",92],["Ahmet","Tarih",88]]
 
-with open("kitaplar.csv","w", newline="") as dosya:
+with open("ogrenciler.csv", "w", newline="",encoding="utf-8") as dosya:
     yazici = csv.writer(dosya)
-    yazici.writerow(["Kitap Adı", "Yazar", "Yayın Yılı"])
-    yazici.writerows(kitaplar)
+    yazici.writerows(ogrenciler)
 
+print("ogrenciler.csv dosyası oluşturuldu ve veriler yazıldı.")
 
-alanlar = ["ad", "yazar","musait"]
-with open("kutuphane.csv","w", newline="") as dosya:
-    yazici = csv.DictWriter(dosya, fieldnames=alanlar)
-    yazici.writeheader()
-    yazici.writerow({"ad": "simyacı", "yazar": "paulo coelho", "musait": True})
-
-with open("kutuphane.csv","r", newline="") as dosya:
+with open("ogrenciler.csv", "r", encoding="utf-8") as dosya:
     okuyucu = csv.DictReader(dosya)
-    for satir in okuyucu:
-        print(satir)
+    satirlar = list(okuyucu)
+
+for satir in satirlar:
+    print(satir)
+
+print("ogrenciler.csv dosyasındaki veriler okundu ve ekrana yazdırıldı.")
+
+print("\n85 ve üzeri not alan öğrenciler:")
+basarili_ogrenciler = [s for s in satirlar if int(s['not']) >= 85]
+for s in basarili_ogrenciler:
+    print(f"- {s['isim']} ({s['not']})")
+
+print("\n Oratalama notu hesaplanıyor...")
+
+notlar =[int(s['not']) for s in satirlar]
+ortalama = sum(notlar) / len(notlar)
+print(f"Ortalama not: {ortalama:.2f}") 
