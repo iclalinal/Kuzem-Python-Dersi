@@ -1,19 +1,20 @@
 import csv
-ogrenciler = [
-    ["Ali", 85],
-    ["Ayşe", 90],
-    ["Mehmet", 78],
-    ["Fatma", 92],
-]
 
-with open("notlar.csv","w", newline="") as dosya:
-    yazici =csv.writer(dosya)
-    yazici.writerow(["Ad","Not"])
-    yazici.writerows(ogrenciler)
+kitaplar = [["simyacı","paulo coelho", 1988], ["sineklerin tanrısı", "william golding", 1954], ["1984", "george orwell", 1949]]
+
+with open("kitaplar.csv","w", newline="") as dosya:
+    yazici = csv.writer(dosya)
+    yazici.writerow(["Kitap Adı", "Yazar", "Yayın Yılı"])
+    yazici.writerows(kitaplar)
 
 
-with open("notlar.csv","r", newline="") as dosya:
-    okuyucu = csv.reader(dosya)
-    baslik = next(okuyucu)  # Başlık satırını atla
+alanlar = ["ad", "yazar","musait"]
+with open("kutuphane.csv","w", newline="") as dosya:
+    yazici = csv.DictWriter(dosya, fieldnames=alanlar)
+    yazici.writeheader()
+    yazici.writerow({"ad": "simyacı", "yazar": "paulo coelho", "musait": True})
+
+with open("kutuphane.csv","r", newline="") as dosya:
+    okuyucu = csv.DictReader(dosya)
     for satir in okuyucu:
         print(satir)
