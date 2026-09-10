@@ -1,11 +1,14 @@
-import json
+class Kitap:
+    def __init__(self, ad,yazar,sayfa_sayisi, musait= True):
+        self.ad = ad
+        self.yazar = yazar
+        self.sayfa_sayisi = sayfa_sayisi
+        self.musait = musait
 
-def kitap_kaydet(kutuphane, dosya_adi):
-    with open(dosya_adi,"w", encoding="utf-8") as dosya:
-        json.dump(kutuphane, dosya, ensure_ascii=False, indent=4)
 
+kitap1 = Kitap("Simyacı", "Paulo Coelho", 197)
+kitap2 = Kitap("Suç ve Ceza", "Fyodor Dostoyevski", 430, False)
+print(kitap2.musait)
 
-kutuphane = {"kitaplar": ["simyacı", "suç ve ceza", "savaş ve barış", "1984", "hayvan çiftliği"], "toplam": 2}
-kitaplar = kutuphane["kitaplar"]
-
-kitap_kaydet(kitaplar, "kutuphane.json")
+print(kitap1.ad)
+print(kitap1.yazar)

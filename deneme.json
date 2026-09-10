@@ -1,0 +1,31 @@
+[
+    {
+        "isim": "Ahmet",
+        "maas": 10000,
+        "ekip_Boyutu": 5,
+        "tur": "Yonetici"
+    },
+    {
+        "isim": "Mehmet",
+        "maas": 8000,
+        "uzmanlik_Alani": "Yazılım",
+        "tur": "Muhendis"
+    },
+    {
+        "isim": "Ayşe",
+        "maas": 6000,
+        "satis_Hedefi": 100,
+        "tur": "Satisci"
+    },
+    {
+        "isim": "Ali",
+        "maas": 5000,
+        "tur": "Calisan"
+    },
+    {
+        "isim": "Fatma",
+        "maas": 7000,
+        "satis_Hedefi": 150,
+        "tur": "Satisci"
+    }
+]

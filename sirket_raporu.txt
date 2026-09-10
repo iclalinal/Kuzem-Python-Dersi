@@ -1,0 +1,7 @@
+Şirket Adı: ABC Şirketi
+Toplam Çalışan Sayısı: 4
+Toplam Maaş: 27000
+Ortalama Maaş: 6750.0
+En Yüksek Maaşlı Çalışan: Mehmet - 9000
+En Düşük Maaşlı Çalışan: Ali - 5000
+Unvan Dağılımı: {'Muhendis': 1, 'Satisci': 2, 'Calisan': 1}

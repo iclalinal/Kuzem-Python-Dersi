@@ -1,0 +1,29 @@
+[
+    {
+        "isim": "Ahmet",
+        "maas": 5000
+    },
+    {
+        "isim": "Ayşe",
+        "maas": 6000
+    },
+    {
+        "isim": "Mehmet",
+        "maas": 7000
+    },
+    {
+        "isim": "Fatma",
+        "maas": 10000,
+        "ekip_Boyutu": 5
+    },
+    {
+        "isim": "Emin",
+        "maas": 8000,
+        "uzmanlik_Alani": "Yazılım"
+    },
+    {
+        "isim": "Aylin",
+        "maas": 9000,
+        "satis_Hedefi": 100000
+    }
+]
